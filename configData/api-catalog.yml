@@ -2,8 +2,25 @@ server:
   port: ${PORT:${SERVER_PORT:0}}
 
 spring:
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+
+  zipkin:
+    baseUrl: http://localhost:9411/
+
   application:
     name: api-catalog
+
+  data:
+    mongodb:
+      username: usrcatalogomongo
+      password: pwdcatalogomongo
+      database: catalogodevmongo
+      port: 27018
+      host: localhost
 
 eureka:
   client:
