@@ -48,6 +48,9 @@ resilience4j.circuitbreaker:
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
 eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}
   client:
     registerWithEureka: true
     fetchRegistry: true

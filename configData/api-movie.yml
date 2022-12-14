@@ -21,6 +21,9 @@ spring:
     show-sql: true
 
 eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}
   client:
     registerWithEureka: true
     fetchRegistry: false
